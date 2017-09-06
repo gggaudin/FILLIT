@@ -6,7 +6,7 @@
 /*   By: ggaudin- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/12 15:45:51 by ggaudin-          #+#    #+#             */
-/*   Updated: 2017/09/02 12:13:17 by ggaudin-         ###   ########.fr       */
+/*   Updated: 2017/09/06 19:31:29 by ggaudin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,10 @@ int			main(int ac, char **av)
 	nbtetri = -1;
 	start = NULL;
 	tmp = NULL;
-	if ((ft_strlen(av[1]) < 8) || \
+	if (ac != 2 || (ft_strlen(av[1]) < 8) || \
 	(ft_strcmp(&(av[1])[ft_strlen(av[1]) - 7], ".fillit") != 0))
-		ft_putendl_fd("error", 2);
-	else if (ac == 2)
+		ft_putendl_fd("usage: ./fillit [file.fillit]\nESC == quit", 2);
+	else
 	{
 		if ((fd = open(av[1], O_RDONLY)) <= 0)
 			write(1, "error\n", 6);
@@ -91,7 +91,5 @@ int			main(int ac, char **av)
 			write(1, "error\n", 6);
 		close(fd);
 	}
-	else
-		ft_putendl_fd("usage: ./fillit [file.fillit]\nESC == quit", 2);
 	return (0);
 }
