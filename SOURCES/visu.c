@@ -6,7 +6,7 @@
 /*   By: ggaudin- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/17 18:00:55 by ggaudin-          #+#    #+#             */
-/*   Updated: 2017/09/02 14:19:36 by ggaudin-         ###   ########.fr       */
+/*   Updated: 2017/09/06 22:40:22 by ggaudin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,10 @@ void		ft_visurender(int nbtetri, char **tab)
 	letter(v);
 	piece(v->t, v, (nbtetri + 1), v->len);
 	mlx_string_put(v->mlx, v->win, 300, 660, 0x00FEFEFE, \
-	"Le plus petit carre est de ");
-	mlx_string_put(v->mlx, v->win, 570, 660, 0x00FEFEFE, ft_itoa(v->len));
-	mlx_string_put(v->mlx, v->win, 585, 660, 0x00FEFEFE, "x");
-	mlx_string_put(v->mlx, v->win, 600, 660, 0x00FEFEFE, ft_itoa(v->len));
+	"The smallest square is ");
+	mlx_string_put(v->mlx, v->win, 535, 660, 0x00FEFEFE, ft_itoa(v->len));
+	mlx_string_put(v->mlx, v->win, 550, 660, 0x00FEFEFE, "x");
+	mlx_string_put(v->mlx, v->win, 565, 660, 0x00FEFEFE, ft_itoa(v->len));
 	mlx_hook(v->win, 2, 0, (int (*)())ft_keyhook, v);
 	mlx_loop(v->mlx);
 }

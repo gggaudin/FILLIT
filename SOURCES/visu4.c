@@ -6,7 +6,7 @@
 /*   By: ggaudin- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/02 12:30:55 by ggaudin-          #+#    #+#             */
-/*   Updated: 2017/09/02 14:08:58 by ggaudin-         ###   ########.fr       */
+/*   Updated: 2017/09/06 22:38:21 by ggaudin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void		info(t_visu *v, int nb)
 	mlx_string_put(v->mlx, v->win, 900, 30, 0x001E2A7D,\
 	"------------------------------");
 	mlx_string_put(v->mlx, v->win, 930, 50, 0x001E2A7D,\
-	"nombre de TETRIMINOS : ");
+	"Number of TETRIMINOS : ");
 	mlx_string_put(v->mlx, v->win, 1160, 50, 0x001E2A7D, (ft_itoa(nb + 1)));
 }
 
